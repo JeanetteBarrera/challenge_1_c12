@@ -1,0 +1,15 @@
+:root {
+    --color-facebook: #3b5999;
+    --color-twitter: #46c1f6;
+    --color-instagram:  #e1306c ;
+    --color-github: #333;
+    --color-youtube: #de463b;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
