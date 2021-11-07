@@ -13,3 +13,94 @@
 body {
     background: linear-gradient(315deg, #ffffff, #d7e1ec);
 }
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container .icon {
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.container .icon span {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    border-radius: 50%;
+}
+
+.container .icon span i {
+    font-size: 25px;
+    line-height: 60px;
+}
+.container .icon:hover span{
+    color: #fff;
+}
+.container .icon .tooltip {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55 );
+    background-color: #fff;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 18px;
+    text-transform: capitalize;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+}
+.container .icon:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    top:-70px;
+}
+.container .icon .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55 );
+
+}
+.container .facebook:hover span,
+.container .facebook:hover .tooltip,
+.container .facebook:hover .tooltip::before {
+    background: var(--color-facebook);
+}
+.container .twitter:hover span,
+.container .twitter:hover .tooltip,
+.container .twitter:hover .tooltip::before {
+    background: var(--color-twitter);
+}
+.container .instagram:hover span,
+.container .instagram:hover .tooltip,
+.container .instagram:hover .tooltip::before {
+    background:var(--color-instagram);
+}
+.container .github:hover span,
+.container .github:hover .tooltip,
+.container .github:hover .tooltip::before {
+    background: var(--color-github);
+}
+.container .youtube:hover span,
+.container .youtube:hover .tooltip,
+.container .youtube:hover .tooltip::before {
+    background: var(--color-youtube);
+}

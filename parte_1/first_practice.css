@@ -2,3 +2,38 @@
     --color-p: linear-gradient(90deg, #0162c8, #55e7fc);
     --color-s: linear-gradient(90deg, #755bea, #ff72c0);
 }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #040d15;
+}
+.container_buttons a {
+    /*border:solid 1px black;*/
+    font-family: monospace;
+    letter-spacing: 4px;
+    border-radius: 20px;
+    margin: 20px 0;
+    padding: 12px 36px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color:white;
+    font-weight: 700;
+    transition: transform .2s ease-in-out ;
+    background: var(--color-p)
+}
+.container_buttons a:nth-child(2){
+    background: var(--color-s)
+}
+.container_buttons a:hover {
+    transform: scale(1.2);
+}
